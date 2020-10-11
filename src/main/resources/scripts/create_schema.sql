@@ -1,0 +1,20 @@
+CREATE TABLE `m_api` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `created_at` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by` varchar(255) DEFAULT NULL,
+  `version` bigint(20) DEFAULT NULL,
+  `auth_header_key` varchar(255) DEFAULT NULL,
+  `auth_header_value` varchar(255) DEFAULT NULL,
+  `endpoint` varchar(255) DEFAULT NULL,
+  `endpoint_hash` varchar(255) DEFAULT NULL,
+  `hit_count` int(11) DEFAULT NULL,
+  `project_code` varchar(255) DEFAULT NULL,
+  `response_body` varchar(255) DEFAULT NULL,
+  `response_delay` int(11) DEFAULT NULL,
+  `response_headers` varchar(255) DEFAULT NULL,
+  `response_status` int(11) DEFAULT NULL,
+  `uuid` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
