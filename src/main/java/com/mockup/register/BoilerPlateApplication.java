@@ -11,14 +11,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 @SpringBootApplication
 @EnableConfigurationProperties
-public class RegisterApplication {
+public class BoilerPlateApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RegisterApplication.class, args);
-	}
+    public static void main(String[] args) {
+		SpringApplication.run(BoilerPlateApplication.class, args);
+    }
 
-	@Bean
-	public AuditorAware<String> auditorProvider() {
-		return new AuditAwareImpl();
-	}
+    @Bean
+    public AuditorAware<String> auditorProvider() {
+        return new AuditAwareImpl();
+    }
 }

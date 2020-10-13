@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mockup</groupId>
-	<artifactId>register</artifactId>
+	<groupId>com.rise91</groupId>
+	<artifactId>spring-boilerplate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Register</name>
-	<description>Register Service for Mockup</description>
+	<name>Spring Boilerplate</name>
+	<description>Boilerplate code for Spring boot applications.</description>
 
 	<properties>
 		<java.version>1.8</java.version>
