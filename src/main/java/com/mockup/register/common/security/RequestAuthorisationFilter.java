@@ -12,9 +12,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class RequestAuthorisationFilter extends OncePerRequestFilter {
+    private static final List<String> IGNORE_URLS = Arrays.asList("/v1/health");
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest,
@@ -35,4 +38,9 @@ public class RequestAuthorisationFilter extends OncePerRequestFilter {
         SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+        return IGNORE_URLS.contains(path);
+    }
 }
